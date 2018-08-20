@@ -8,3 +8,11 @@ chats.forEach(chat => {
     chatting.show(chat.getAttribute('chat-room'))
   })
 })
+
+let events = ['undo', 'redo', 'cut', 'copy', 'paste', 'selectall'];
+  
+events.forEach(__event__ => {
+  document.addEventListener(__event__, event => {
+    console.log(event);
+  });
+});

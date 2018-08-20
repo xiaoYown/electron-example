@@ -15,3 +15,12 @@
   </body>
 </html>
 <script src="../../../static/js/chatting.js"></script>
+<script>
+  let events = ['undo', 'redo', 'cut', 'copy', 'paste', 'selectall'];
+  
+  events.forEach(__event__ => {
+    document.addEventListener(__event__, event => {
+      console.log(event);
+    });
+  });
+</script>

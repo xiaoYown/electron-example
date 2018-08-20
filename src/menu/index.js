@@ -8,27 +8,42 @@ let template = [{
     accelerator: 'CmdOrCtrl+Z',
     role: 'undo'
   }, {
-    label: '重做',
-    accelerator: 'Shift+CmdOrCtrl+Z',
+    label: '前进',
+    accelerator: 'CmdOrCtrl+Y',
     role: 'redo'
   }, {
     type: 'separator'
   }, {
-    label: '剪切',
+    label: '剪切', // can listen
     accelerator: 'CmdOrCtrl+X',
     role: 'cut'
   }, {
-    label: '复制',
+    label: '复制', // can listen
     accelerator: 'CmdOrCtrl+C',
     role: 'copy'
   }, {
-    label: '粘贴',
+    label: '粘贴', // can listen
     accelerator: 'CmdOrCtrl+V',
     role: 'paste'
   }, {
     label: '全选',
     accelerator: 'CmdOrCtrl+A',
     role: 'selectall'
+  }, {
+    label: 'click test',
+    click (menuItem, browserWindow, event) {
+      console.log(menuItem);
+      console.log('---');
+      console.log(browserWindow);
+      console.log('---');
+      console.log(event);
+    }
+  }, {
+    label: 'submenu',
+    submenu: [{
+      label: 'close',
+      role: 'close'
+    }]
   }]
 }, {
   label: '查看',
