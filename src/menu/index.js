@@ -2,6 +2,12 @@ const electron = require('electron')
 const Menu = electron.menu
 
 let template = [{
+  label: '文件',
+  submenu: [{
+    label: '关闭',
+    role: 'close'
+  }]
+}, {
   label: '编辑',
   submenu: [{
     label: '撤销',
@@ -39,10 +45,9 @@ let template = [{
       console.log(event);
     }
   }, {
-    label: 'submenu',
+    label: 'show sub menu',
     submenu: [{
-      label: 'close',
-      role: 'close'
+      label: 'sub menu'
     }]
   }]
 }, {
