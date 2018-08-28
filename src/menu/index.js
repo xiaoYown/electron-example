@@ -1,5 +1,6 @@
+const actions = require('../actions/index')
 const electron = require('electron')
-const Menu = electron.menu
+// const Menu = electron.menu
 
 let template = [{
   label: '文件',
@@ -12,11 +13,17 @@ let template = [{
   submenu: [{
     label: '撤销',
     accelerator: 'CmdOrCtrl+Z',
-    role: 'undo'
+    // role: 'undo'
+    click (menuItem, browserWindow) {
+      actions.edit(browserWindow, 'undo')
+    }
   }, {
     label: '前进',
     accelerator: 'CmdOrCtrl+Y',
-    role: 'redo'
+    // role: 'redo'
+    click (menuItem, browserWindow) {
+      actions.edit(browserWindow, 'undo')
+    }
   }, {
     type: 'separator'
   }, {
