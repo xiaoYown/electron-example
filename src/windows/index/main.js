@@ -11,6 +11,7 @@ let menu;
 function initWindow () {
   win = new BrowserWindow();
   menu = Menu.buildFromTemplate(menuTemplate);
+  Menu.setApplicationMenu(menu)
 
   win.setMenu(menu);
 
