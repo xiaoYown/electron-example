@@ -32,3 +32,4 @@ class ChattingWindow {
 }
 
 module.exports = ChattingWindow
+
