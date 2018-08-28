@@ -1,9 +1,6 @@
 let template = [{
-  label: '文件',
-  submenu: [{
-    label: '关闭',
-    role: 'close'
-  }]
+  label: 'help',
+  role: 'help'
 }]
 
 module.exports = () => template
